@@ -1,0 +1,16 @@
+<h1>Listado de Trabajadores</h1>
+<table class="table table-bordered table-striped tabla" style="margin-top: 40px;">
+  <thead>
+    <tr class="filters">
+      <th>Nombre</th>
+      <th>Cargo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trabajador of trabajadores">
+      <td>{{ trabajador.nombre }}</td>
+      <td>{{ trabajador.cargo }}</td>
+      <td><button routerLink="/trabajadores/{{trabajador.id}}">Ver</button></td>
+    </tr>
+  </tbody>
+</table>
